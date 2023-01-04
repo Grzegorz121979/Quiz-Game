@@ -19,8 +19,11 @@ for question in questions:
     for option in options[question_num]:
         print(option)
     guess = input("Enter (A, B, C): ").upper()
-    question_num += 1
+    guesses.append(guess)
     if guess == answers[question_num]:
+        score += 1
         print("Correct")
     else:
-        print(f"The answer is {option[question_num]}")
+        print(f"The correct answer is {answers[question_num]}")
+    question_num += 1
+print(f"Your score is {score}")
